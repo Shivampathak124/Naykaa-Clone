@@ -1,10 +1,10 @@
 // data to map
-const bodycareData = [
+const bodyCareData = [
     {
-        img:"https://images-static.nykaa.com/media/catalog/product/7/a/7a3293487167534803_p.jpg?tr=w-344,h-344,cm-pad_resize",
+        img:"https://images-static.nykaa.com/media/catalog/product/7/a/7a3293487167534803_p.jpg",
         id:201,
-        originalPrice:325,
-        discountedPrice:276,
+        originalPrice:1799,
+        discountedPrice:1727,
         name:"Estee Lauder Advanced Night Repair Synchronized Multi-Recovery Complex (Serum)",
       },
     {
@@ -15,7 +15,7 @@ const bodycareData = [
         name:"SUGAR Matte As Hell Crayon Lipstick With Free Sharpener - 19 Emma Woodhouse (Earthy Brown)"
       },
     {
-        img:"https://images-static.nykaa.com/media/catalog/product/7/a/7a3293487167534803_p.jpg?tr=w-344,h-344,cm-pad_resize",
+        img:"https://images-static.nykaa.com/media/catalog/product/7/a/7a3293487167534803_p.jpg",
         id:203,
         originalPrice:1175,
         discountedPrice:999,
@@ -36,7 +36,7 @@ const bodycareData = [
         name:"Estee Lauder Advanced Night Repair Synchronized Multi-Recovery Complex (Serum)",
       },
     {
-        img:"https://images-static.nykaa.com/media/catalog/product/7/a/7a3293487167534803_p.jpg?tr=w-344,h-344,cm-pad_resize",
+        img:"https://images-static.nykaa.com/media/catalog/product/7/a/7a3293487167534803_p.jpg",
         id:206,
         originalPrice:448,
         discountedPrice:380,
@@ -150,8 +150,8 @@ const bodycareData = [
 ]
 
 // append to this div
-setTable(bodycareData);
-function setTable(bodycareData) {
+setTable(bodyCareData);
+function setTable(bodyCareData) {
     let bodyCareContainer = document.querySelector(".items");
     bodyCareContainer.innerHTML = "";
     bodyCareData.map((element, i) => {
