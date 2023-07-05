@@ -1,0 +1,58 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>face Care</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="index.html" id="home">
+                <img src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/cosmetic-companies/nykaa-logo.png"/>
+            </a>
+        </div>
+        <div>
+            <a href="bodycare.html" id="bodyCare">Body Care</a>
+            <a href="facecare.html" id="faceCare">Face Care</a>
+            <a href="haircare.html" id="hairCare">Hair Care</a>
+        </div>
+        <div>
+            <a href="login.html" id="login">
+                Login
+            </a>
+            <a href="signup.html" id="signUp">
+                SignUp
+            </a>
+            <a href="cart.html" id="cart">
+                🛍️ <div id="cartCount">0</div>
+            </a>
+        </div>
+    </nav>
+    
+    <div id="faceCareContainer">
+        <div class="banner">
+            <h1>The Skincare Store</h1>
+            <h4>Discover a limitless range of Skincare</h4>
+            <img src="https://images-static.nykaa.com/uploads/6ea37987-3378-413d-b3aa-c6e9f57fe003.jpg?tr=w-2400,cm-pad_resize" alt="nykaa bodycare"/>
+            <h2>All Products</h2>
+        </div>
+        <!-- append faceCare data to this div -->
+        <div class="products">
+            <div class="filters">
+                <select id="priceSort">
+                    <option value="">Sort by Price:</option>
+                    <option value="asc">Price low to high</option>
+                    <option value="dsc">Price high to low</option>
+                </select>
+            </div>
+            <div class="items"> 
+            </div>
+        </div>
+    </div>
+</body>
+<script src="bodycare.js"></script>
+</html>

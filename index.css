@@ -1,0 +1,115 @@
+/* navbar CSS */
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    font-family: "sans-serif";
+  }
+  
+  nav > div > h1,
+  nav > div > h3 {
+    margin-left: 20px;
+  }
+  nav {
+    height: 60px;
+    width: 100%;
+    font-size: larger;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  nav > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    font-size: 18px;
+  }
+  #home>img{
+    width: 100px;
+  }
+
+  nav > div > a {
+    
+  }
+  
+  nav > div > div {
+    display: flex;
+    align-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  #faceCareContainer .banner {
+    padding:30px;
+  }
+  #faceCareContainer .banner img{
+    width:100%;
+    border-radius: 5px;
+    
+  }
+  .banner h2{
+    text-align: center;
+  }
+
+  .items{
+    width: 80%;;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap:20px;
+    padding:30px;
+    padding-top: 0;
+    
+  }
+  .products{
+    width:100%;
+    display: flex;
+
+  }
+  .filters{
+    width:20%''
+  }
+  .items img {
+    width: 100%;
+  }
+  
+  .items div span{
+    color:grey;
+  }
+
+  .items div p{
+    color:grey;
+  }
+  .items div span#off{
+    color:green;
+  }
+  .original{
+    text-decoration: line-through;
+  }
+  
+  .items>div{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+    padding:20px;
+  }
+
+  #btn{
+    margin:10px;
+  }
+  .filters select{
+    font-size: medium;
+    width:100%;
+    height:40px;
+    margin:10px;
+  }
+  .filters select+select{
+    margin-top: 15px;
+  }
+
