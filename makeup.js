@@ -1,63 +1,41 @@
 // data to map
-const bodyCareData = [
+const faceCareData = [
     {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/a/5aa014d8904245713973_1.jpg",
+        img:"https://images-static.nykaa.com/media/catalog/product/0/3/034f18d29360_H_8901030911682.jpg",
         id:201,
-        originalPrice:559,
-        name:"Nykaa Naturals Onion & Fenugreek Hair Growth Paraben and Sulphate Free Shampoo",
+        originalPrice:325,
+        name:"Lakme 9 To 5 Wet & Dry Compact - 10 Ivory",
       },
     {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/9/8904245708245_1.jpg",
+        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/3/f39f16c8904330900776.jpg",
         id:202,
-        originalPrice:499,
-        name:"Nykaa Wanderlust Shower Gel - Californian Almond Milk(300ml)"
+        originalPrice:909,
+        name:"Kay Beauty Matte Blush - Sugar Candy(8.5gm)",
       },
     {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/c/dcb5b1e806360102817_1.jpg",
+        img:"https://images-static.nykaa.com/media/catalog/product/6/c/6c55aafNYKAC00000106_01.jpg?tr=w-344,h-344,cm-pad_resize",
         id:203,
-        originalPrice:435,
-        name:"Lotus Organics Precious Brightening Face Wash(100gm)",
+        originalPrice:849,
+        name:"Nykaa Cosmetics Matte to Last Pore Minimizing Foundation - 06Y Medium (30ml)",
       },
     {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/6/f6bd74bNYNIVOFF00003a_1.jpg",
+        img:"https://images-static.nykaa.com/media/catalog/product/1/9/19b50528906090499590_01.jpg",
         id:204,
-        originalPrice:799,
-        name:"Nivea Sunscreen With Spf 50+, Vit E, Pa+++, Uva & Uvb Protection- Instant & Waterproof(125ml)"
+        originalPrice:229,
+        name:"SUGAR Matte As Hell Crayon Lipstick With Free Sharpener - 19 Emma Woodhouse (Earthy Brown)"
       },
-    {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/a/5aa014d8904245713973_1.jpg",
-        id:205,
-        originalPrice:899,
-        name:"Nykaa Naturals Onion & Fenugreek Hair Growth Paraben and Sulphate Free Shampoo",
-      },
-    {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/9/8904245708245_1.jpg",
-        id:202,
-        originalPrice:399,
-        name:"Nykaa Wanderlust Shower Gel - Californian Almond Milk(300ml)"
-      },
-    {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/c/dcb5b1e806360102817_1.jpg",
-        id:203,
-        originalPrice:490,
-        name:"Lotus Organics Precious Brightening Face Wash(100gm)",
-      },
-    {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/6/f6bd74bNYNIVOFF00003a_1.jpg",
-        id:204,
-        originalPrice:799,
-        name:"Nivea Sunscreen With Spf 50+, Vit E, Pa+++, Uva & Uvb Protection- Instant & Waterproof(125ml)"
-      }
+    
 ]
 
-setTable(bodyCareData);
+// append to this div
+setTable(faceCareData);
 var cartCountText = document.getElementById("cartCount");
 var cartData = JSON.parse(localStorage.getItem("cart")) || [];
 cartCountText.textContent=cartData.length;
-function setTable(bodyCareData) {
-    let bodyCareContainer = document.querySelector(".items");
-    bodyCareContainer.innerHTML = "";
-    bodyCareData.map((element, i) => {
+function setTable(faceCareData) {
+    let faceCareContainer = document.querySelector(".items");
+    faceCareContainer.innerHTML = "";
+    faceCareData.map((element, i) => {
       var mainDiv=document.createElement("div");
       var imgData=document.createElement("img");
       var nameData=document.createElement("p");
@@ -99,31 +77,32 @@ function setTable(bodyCareData) {
         discountedPrice, 
         breakLine2,
         addToCart);
-
-        bodyCareContainer.append(mainDiv);
+        
+      faceCareContainer.append(mainDiv);
     })
-  }
+}
+
 
 var priceSort=document.getElementById("priceSort");
   priceSort.addEventListener("change", function(){
     if(this.value=="asc"){
-        bodyCareData.sort(function(a, b){
+        faceCareData.sort(function(a, b){
             var keyA = a.afterDiscount;
             var keyB = b.afterDiscount;
             if (keyA < keyB) return -1;
             if (keyA > keyB) return 1;
             return 0;
         })
-        setTable(bodyCareData);
+        setTable(faceCareData);
     }
     if(this.value=="dsc"){
-        bodyCareData.sort(function(a, b){
+        faceCareData.sort(function(a, b){
             var keyA = a.afterDiscount;
             var keyB = b.afterDiscount;
             if (keyA > keyB) return -1;
             if (keyA < keyB) return 1;
             return 0;
         })
-        setTable(bodyCareData);
+        setTable(faceCareData);
     }
   })

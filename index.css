@@ -32,9 +32,14 @@ body {
     width: 100px;
   }
 
-  nav > div > a {
-    
+  #signUp{
+    background-color: #e80071;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+    font-size: x-small;
   }
+
   
   nav > div > div {
     display: flex;
@@ -54,8 +59,14 @@ body {
     border-radius: 5px;
     
   }
-  .banner h2{
+  .banner h1{
+    margin-top: auto;
+  }
+  .banner h2, h3{
     text-align: center;
+  }
+  .banner h4,h3{
+    opacity:.6;
   }
 
   .items{
@@ -82,22 +93,28 @@ body {
   
   .items div span{
     color:grey;
+    font-size: small;
+    margin-left: 5px;
   }
 
   .items div p{
     color:grey;
+    font-size: small;
   }
   .items div span#off{
     color:green;
+    font-size: small;
   }
   .original{
     text-decoration: line-through;
+    color:rgb(167, 164, 164);
   }
   
   .items>div{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 5px;
     padding:20px;
+    cursor: pointer;
   }
 
   #btn{
@@ -113,3 +130,104 @@ body {
     margin-top: 15px;
   }
 
+  #searchBar{
+    height:40px;
+    justify-content:last baseline;
+  }
+  #offerNav{
+    height: 30px;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    background-color: #e80071;
+    color:white;
+    vertical-align:baseline;
+  }
+  marquee{
+    font-size: small;
+    display: flex;
+    align-items: center;
+  }
+  #addButton{
+    text-align: center;
+    margin-bottom: 0px;
+
+  }
+  
+ #brands{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+ #brands div{
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    align-items: flex-start;
+    width: 21%;
+    margin: 1%;
+ }
+
+sup {
+  color: white;
+  margin-left: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  background-color: #e80071;
+  padding: 4px;
+  border-radius: 10px;
+}
+.carousel {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  height: 100%;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+@keyframes carousel {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  53.33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.carousel .slide:nth-child(1) {
+  animation: carousel 5s infinite;
+}
+
+.carousel .slide:nth-child(2) {
+  animation: carousel 15s infinite 5s;
+}
+
+.carousel .slide:nth-child(3) {
+  animation: carousel 15s infinite 10s;
+}
