@@ -19,7 +19,7 @@
 <body>
     <!-- navbar -->
     <nav id="navbar">
-        <img src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo.png79-1.jpg"
+        <img src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo.png"
             alt="Nykaa logo">
         <!-- <div>
             <h1>1 - LOGIN</h1>
@@ -61,14 +61,18 @@
                 <p>Credit/Debit Card</p>
                 <input placeholder="Card Number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
                     autocomplete="cc-number" maxlength="16" />
+                <input type="text" id="otpInput" placeholder="Enter OTP">
 
                 <label class="expiry">expiry</label>
                 <input type="month" id="start" name="start" value="2022-07">
 
-                <span id="checkbox"><input class="check" type="checkbox">
+                <!-- <span id="checkbox"><input class="check" type="checkbox">
                     <label>Use this as my default Shipping Address</label>
-                </span>
-                <button id="btn" type="click"><a href="orderplaced.html">PAY NOW ></a></button>
+                </span> -->
+                <button id="btn" type="click">GET OTP</button>
+                
+                <!-- Add a button to initiate OTP verification -->
+                <button id="verifyOtpButton" type="click">Verify And Pay Now ></button>
             </form>
         </div>
 

@@ -133,7 +133,7 @@ body {
 #container2 {
     /* border:1px solid black; */
     width: 44%;
-    height: 400px;
+    height: 450px;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
@@ -221,17 +221,35 @@ form>input {
 #checkbox>label {
     padding-top: 5px;
     margin-left: 10px;
+    margin-top: auto;
 
+}
+#container2>button{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #btn {
-    height: 60px;
+    height: 35px;
     width: 98%;
     border: 0px;
-    background-color: rgb(235, 20, 135);
+    background-color: rgb(62, 219, 109);
     color: white;
-    margin-top: 50px;
+ 
 
+}
+#verifyOtpButton{
+       height: 35px;
+        width: 98%;
+        border: 0px;
+        background-color: rgb(235, 20, 135);
+        color: white;
+        margin-top: 10%;
+        
+      
+}
+#otpInput{
+    margin-top: 10%;
 }
 
 a {

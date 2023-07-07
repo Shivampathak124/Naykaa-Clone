@@ -1,4 +1,4 @@
-// Sample data
+
 var cart = [
   {
     img: "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/4/149e044NYLOPROF00001a_1.jpg",
@@ -20,146 +20,148 @@ var cart = [
   }
 ];
 
-var data = document.querySelector("#maindata");
-var totalprice = document.querySelector("#totalprice");
-var sum = 0;
-var shopingbag = document.querySelector("#shopingbag");
-shopingbag.innerText = "Shopping bag" + " " + "(" + cart.length + ")";
 
-// This is main function
-var max = 0;
+
+let cart = JSON.parse(localStorage.getItem("data"))
+
+let data = document.querySelector("#maindata")
+// console.log(cart[0].price)
+let totalprice = document.querySelector("#totalprice")
+let sum = 0
+let shopingbag = document.querySelector("#shopingbag")
+shopingbag.innerText = "Shoping bag" + " " + "(" + cart.length + ")"
+
+// This is main function 
+let max = 0
 cart.forEach(function (ele, index) {
-  ele.min = +ele.min;
-  ele.max = +ele.max;
-  max += ele.max;
+  ele.min = +ele.min
+  ele.max = +ele.max
+  max += ele.max
 
-  sum += ele.min;
-  var body = document.createElement("div");
-  body.setAttribute("class", "body");
-  var body1 = document.createElement("div");
-  body1.setAttribute("class", "body1");
-  var body2 = document.createElement("div");
-  body2.setAttribute("class", "body2");
 
-  var image = document.createElement("img");
-  image.src = ele.img;
-  image.setAttribute("class", "image");
-  var Name = document.createElement("h6");
-  Name.innerText = ele.desc;
-  Name.setAttribute("class", "name");
-  var btn = document.createElement("img");
+
+  sum += ele.min
+  let body = document.createElement("div")
+  body.setAttribute("class", "body")
+  let body1 = document.createElement("div")
+  body1.setAttribute("class", "body1")
+  let body2 = document.createElement("div")
+  body2.setAttribute("class", "body2")
+
+  let image = document.createElement("img")
+  image.src = ele.img
+
+  image.setAttribute("class", "image")
+  let Name = document.createElement("h6")
+  Name.innerText = ele.desc
+  Name.setAttribute("class", "name")
+  let btn = document.createElement("img")
   btn.addEventListener("click", function () {
-   fn(ele, index);
-  });
+    fn(ele, index)
+  })
 
-  btn.src =
-    "https://cdn-icons.flaticon.com/png/128/3405/premium/3405244.png?token=exp=1651745346~hmac=7e9f77b6f20ddbad608f269593ac8192";
-  btn.setAttribute("class", "delete");
+  btn.src = "https://cdn-icons-png.flaticon.com/128/5974/5974771.png"
+  btn.setAttribute("class", "delete")
   // This is two div in body2
 
-  var qntdiv = document.createElement("div");
-  qntdiv.setAttribute("id", "qnt");
-  var prcdiv = document.createElement("div");
-  prcdiv.setAttribute("id", "prc");
+  let qntdiv = document.createElement("div")
+  qntdiv.setAttribute("id", "qnt")
+  let prcdiv = document.createElement("div")
+  prcdiv.setAttribute("id", "prc")
   // This is plus
-  var plus = document.createElement("p");
-  plus.innerText = "Quantity";
-  plus.setAttribute("class", "Quantity");
+  let plus = document.createElement("p")
+  plus.innerText = "Quantity"
+  plus.setAttribute("class", "Quantity")
   // This is quantity
-  var Quantity = document.createElement("p");
-  Quantity.innerText = ":";
-  Quantity.setAttribute("class", "semiclone");
+  let Quantity = document.createElement("p")
+  Quantity.innerText = ":"
+  Quantity.setAttribute("class", "semiclone")
 
-  // This is minus
-  var minus = document.createElement("p");
-  minus.innerText = "1˅";
-  minus.setAttribute("class", "num");
-  // price
+  // This is minus 
+  let minus = document.createElement("p")
+  minus.innerText = "1˅"
+  minus.setAttribute("class", "num")
+  // price 
 
-  var omrp;
   if (ele.max == undefined) {
-    omrp = "";
-  } else {
-    omrp = "₹" + ele.max;
+    var omrp = ""
   }
-  var mrp = document.createElement("p");
-  mrp.innerText = omrp;
-  mrp.setAttribute("class", "mrp");
-  var price = document.createElement("p");
-  price.innerText = "₹" + ele.min;
-  price.setAttribute("class", "price");
+  else {
+    omrp = "₹" + ele.max
+  }
+  let mrp = document.createElement("p")
+  mrp.innerText = omrp
+  mrp.setAttribute("class", "mrp")
+  let price = document.createElement("p")
+  price.innerText = "₹" + ele.min
+  price.setAttribute("class", "price")
+
 
   // These are append
-  prcdiv.append(mrp, price);
-  qntdiv.append(plus, Quantity, minus);
-  body1.append(image, Name, btn);
-  body2.append(qntdiv, prcdiv);
-  body.append(body1, body2);
-  data.append(body);
+  prcdiv.append(mrp, price)
+  qntdiv.append(plus, Quantity, minus)
+  body1.append(image, Name, btn)
+  body2.append(qntdiv, prcdiv)
+  body.append(body1, body2)
+  data.append(body)
 });
+// console.log(mrpf)
+totalprice.innerText = "₹" + sum
 
-totalprice.innerText = "₹" + sum;
-
-// This is delete Function
+//this is delete Function
 function fn(ele, index) {
   cart.splice(index, 1);
 
-  localStorage.setItem("data", JSON.stringify(cart));
+  // localStorage.setItem("cart", JSON.stringify(product))
+
+  localStorage.setItem("data", JSON.stringify(cart))
 
   window.location.reload();
+  // console.log(cart)
+}
+var removeButtons = document.querySelectorAll(".delete");
+removeButtons.forEach(function (button, index) {
+  button.addEventListener("click", function () {
+    fn(cart[index], index);
+  });
+});
+// description 
+// Calculate the discounted amount based on the coupon code
+function calculateDiscountedAmount(total, couponCode) {
+  if (couponCode === "Shivam15") {
+    return total - total * 0.15; // 15% discount
+  }
+  return total;
 }
 
-// Other code for calculating totals and displaying them
-
+// Get the elements for displaying the totals
 var totalbag = document.querySelector(".totalbagf");
-totalbag.innerText = "₹" + max;
+totalbag.innerText = "₹" + max.toFixed(0); // Display total without decimal places
 var bagdiscount = document.querySelector(".discountbagf");
-bagdiscount.innerText = (max - sum) - 100;
+bagdiscount.innerText = (max - sum - 100).toFixed(0); // Display total without decimal places
 var subtotal = document.querySelector(".totalsubf");
-subtotal.innerText = max - (max - sum) + 100;
+subtotal.innerText = (max - (max - sum) + 100).toFixed(0); // Display total without decimal places
 var discount = document.querySelector(".offdiscount");
 discount.innerText = -100;
 var charge = document.querySelector(".chargef");
 charge.innerText = "Free";
 var grandtotal2 = document.querySelector(".grandtotal2f");
+grandtotal2.innerText = "₹" + sum.toFixed(0); // Display total without decimal places
 
-grandtotal2.innerText = "₹ " + sum;
-
-var couponCodeElement = document.getElementById("couponCode");
-couponCodeElement.addEventListener("input", applyCoupon);
-
-var applyCouponButton = document.createElement("applyCouponButton");
-applyCouponButton.textContent = "Apply Coupon";
-applyCouponButton.addEventListener("click", applyCoupon);
-
-// Append the "Apply Coupon" button to the document
-var couponContainer = document.getElementById("couponContainer");
-couponContainer.appendChild(applyCouponButton);
-
-function applyCoupon() {
-  var couponCode = couponCodeElement.value;
-
-  // Apply coupon code logic here
+// Calculate the discounted amount based on the coupon code
+function calculateDiscountedAmount(total, couponCode) {
   if (couponCode === "Shivam15") {
-    var totalAmount = calculateTotalAmount(cart);
-    var discountedAmount = totalAmount - totalAmount * 0.15; // 15% discount
-
-    // Update the bill amount in the HTML
-    var billAmountElement = document.getElementById("billAmount");
-    billAmountElement.textContent = "₹" + discountedAmount;
+    return total - total * 0.15; // 15% discount
   }
-}
-
-function calculateTotalAmount(cart) {
-  var total = 0;
-  cart.forEach(function (item) {
-    total += item.min;
-  });
   return total;
 }
 
-var back = document.querySelector("#back");
-back.addEventListener("click", function () {
-  // console.log("fldjks")
-  // back.innerText
+// Apply coupon code logic when the Apply Coupon button is clicked
+var applyCouponButton = document.getElementById("applyCouponButton");
+applyCouponButton.addEventListener("click", function () {
+  var couponCode = document.getElementById("couponCode").value;
+  var discountedAmount = calculateDiscountedAmount(sum, couponCode);
+  grandtotal2.innerText = "₹" + discountedAmount;
+  document.getElementById("grandtotal").innerText = "Grand Total";
+  document.getElementById("totalprice").innerText = "₹" + discountedAmount;
 });
