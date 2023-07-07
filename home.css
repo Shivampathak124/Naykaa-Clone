@@ -63,6 +63,7 @@
         }
         a{
         text-decoration: none;
+        color: black;
         }
          h1{
         font-family: 'Roboto', sans-serif;
@@ -175,6 +176,7 @@
         }
         .margin:hover > .userLogin {
         display: block;
+
         }
         #cartItem {
         margin: 26px 15px;
@@ -192,49 +194,19 @@
         height: 18px;
         border: 1px solid white;
         border-radius: 50px;
-        background: #f70;
+        background: rgb(255, 33, 115);
         color: white;
         text-align: center;
         padding-top: 2px;
         cursor: pointer;
+        margin-top: 16px;
+        
         
         }
         #cartClick{
         display: flex;
         }
-        .cartAdd{
-        z-index: 9999999;
-        position: absolute;
-        width: 290px;
-        background-color: white;
-        display: none;
-        margin-top:60px;
-        right: 5rem;
-        box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
-        }
-        .cartAdd p{
-        text-align: center;
-        margin: 5px 15px;
-        font-size: 20px;
-        }
-        .cartAdd a{
-        color: #fff;
-        }
-        
-        .cartAdd > button{
-        padding: 10px;
-        width: 260px;
-        margin: 10px 15px;
-        cursor: pointer;
-        font-size: 13px;
-        background: #df4723;
-        border: 1px solid #df4723;
-        
-        }
-         #cartClick:hover  .cartAdd {
-        display: block;
-        }
-        
+       
         
     /* navbar ended */
     
@@ -284,25 +256,7 @@
 
         }
       
-        #catLinks p {
-            margin:5px;
-            font-size: 20px;
-            padding-left: 10px;
-            margin-top: 14px;
-            }
-          
-        
-        #catLinks p {
-            font-size: 18px;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-weight: 300;
-        }
-        #catLinks p:hover{
-        color: rgb(226, 12, 137);
-        cursor: pointer;
-        
-        }
-     
+       
         #catLinks li .dropdown{
         top: 2rem;
         position: absolute;
@@ -311,20 +265,18 @@
         background-color: whitesmoke;
         
         }
-
-     
+        
         li .dropdown{
         margin-top: 10px;
         display: none;
         }
         li .dropdown li{
-        display: block;
         float: none;
         cursor: pointer;
         
         }
        
-        #catLinks li:hover .dropdown{
+        #catLinks li:hover .dropdown {
         display: block;
         font-size: 18px;
         line-height: 21px;
@@ -937,5 +889,3 @@
     text-decoration: none;
   }
 
-
- 
