@@ -40,12 +40,14 @@
     .getapp > a:hover {
         color: rgb(255, 0, 200);
         cursor: pointer;
+       
        }
     .getapp  a {
        width: 8%;
        margin-top: 2px;
        margin-right: 3px;
        justify-content: center;
+      
     }
     *{
         margin: 0;
@@ -65,6 +67,7 @@
         text-decoration: none;
         color: black;
         }
+        
          h1{
         font-family: 'Roboto', sans-serif;
         }
@@ -74,6 +77,13 @@
         p{
         font-family: 'Roboto', sans-serif;
             color: #3c3c3c;
+        }
+        #hover{
+            font-size: 14px;
+    font-weight: 600;
+    /* letter-spacing: 0.1px; */
+    text-transform: capitalize;
+    color: #03021a;
         }
 
         #navbar{
@@ -95,11 +105,22 @@
         justify-content: space-around;
         
         }
-        .logo img{
-        padding-top: 10px;
-        width: 100px;
-        height: 40px;
+        .marginn{
+           
+           
         }
+        #logo{
+            display: block;
+            margin-left: 100px;
+            margin-top: 30px;
+           height: 25px;
+           height: 30px;
+            
+
+            
+         
+        }
+     
         form{
          margin: 20px 10px 30px 28px;
         }
@@ -108,6 +129,7 @@
             border-radius: 3px;
             background-color: #f7f7f7;
             color: #3c3c3c;
+           border-color: black;
             font-size: 12px;
             letter-spacing: .55px;
             line-height: 19px;
@@ -121,6 +143,8 @@
         margin: 30px 10px;
         display: flex;
         font-size: 14px;
+       
+        justify-content: space-around;
         cursor: pointer;
         }
       
@@ -144,6 +168,8 @@
         
         .userBox {
         display: flex;
+      
+       margin-left: -50px;
         }
         .userLogin{
         z-index: 9999999;
@@ -181,7 +207,11 @@
         #cartItem {
         margin: 26px 15px;
         color: rgb(112, 109, 109);
+        display: block;
         width: 20px !important;
+        height: 30px;
+        width: 30px;
+        
         position: absolute;
         cursor: pointer;
         }
@@ -200,11 +230,13 @@
         padding-top: 2px;
         cursor: pointer;
         margin-top: 16px;
+       
         
         
         }
         #cartClick{
         display: flex;
+        margin-left: -70px;
         }
        
         
@@ -288,9 +320,13 @@
     }
         #catLinks:hover .dropdown li{
         margin: 10px;
-        font-size: 18px;
+        margin-top: 10px;
+        font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 20px;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-weight: 400;
+       
         }
         
     
@@ -424,13 +460,14 @@
        #trending img {
         width: 90%;
         border-radius: 10px;
+        display: block;
     }
     #feature {
         display: grid;
-        grid-template-columns: 23%  23%  23%  23%;
+        grid-template-columns: repeat(5,1fr);
         gap: 1%;
         text-align: center;
-        justify-content: center;
+        justify-content: space-evenly;
         margin: auto;
     
         border-radius: 10px;
@@ -448,19 +485,11 @@
         margin-bottom: 20px;
         border-radius: 10px;
         text-align: center;
-        justify-content: center;
+        justify-content: space-around;
         margin: auto;
     }
     
-    .red {
-        text-align: center;
-        font-size: 16px;
-        color: rgb(245, 92, 118);
-    }
-    .no {
-        text-align: center;
-        font-size: 16px;
-    }
+    
     .mama {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -582,7 +611,7 @@
             margin: auto;
             margin-bottom: 50px;
         }
-
+ /*footer part*/
         #head{
             display: grid;
             grid-template-columns:1fr;
