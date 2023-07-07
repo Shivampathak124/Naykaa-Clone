@@ -118,7 +118,7 @@
     display: grid;
     height: 117px;
     background-color: white;
-    grid-template-rows: 60% 0%;
+    grid-template-rows: 70% 30%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
         rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
@@ -222,7 +222,6 @@
     font-weight: bolder;
     margin-top: 0px;
     margin-left: -35px;
-    font-size: 16px;
 
 
 }
@@ -442,7 +441,7 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 70% 30%;
 }
 
 * {
@@ -451,7 +450,10 @@ body {
     letter-spacing: 0.6px;
 
 }
-#applyCouponButton{
-    background-color: #fc2779;
-    color: black;
+button#applyCouponButton {
+    background-color:#fc2779;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
 }

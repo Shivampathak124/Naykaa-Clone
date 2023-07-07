@@ -1,55 +1,46 @@
-var customerAdd = JSON.parse(localStorage.getItem("custAdd"));
-// console.log(customerAdd)
-let cart = JSON.parse(localStorage.getItem("data"))
-display(customerAdd);
-
-function display(data) {
-    data.forEach(function (el) {
-        var d4 = document.createElement("div");
-
-        var custname = document.createElement("p")
-        custname.innerText = el.name;
-
-        var add = document.createElement("p")
-        add.innerText = el.add;
-
-        var mobile = document.createElement("p")
-        mobile.innerText = "+91-" + el.mobile;
-
-
-
-
-
-
-        d4.append(custname, add, mobile);
-        console.log(d4)
-
-        document.querySelector("#customerAdd").append(d4);
-
-    })
-
+// Generate a random 6-digit OTP
+function generateOTP() {
+    return Math.floor(100000 + Math.random() * 900000);
 }
 
+// Display an alert with the generated OTP and initiate OTP verification
+function displayOTP() {
+    var otp = generateOTP();
+    alert("OTP: " + otp);
 
+    // Store the OTP in local storage
+    localStorage.setItem("otp", otp);
+}
 
-function sum() {
-    let total = 0
-    let data = JSON.parse(localStorage.getItem("data"))
-    for (let i = 0; i < data.length; i++) {
-        if (data[i].min) {
-            total += data[i].min;
-        }
+// Verify the entered OTP
+function verifyOTP() {
+    var enteredOTP = document.getElementById("otpInput").value;
+    var storedOTP = localStorage.getItem("otp");
+
+    if (enteredOTP === storedOTP) {
+        alert("OTP verification successful!");
+        // Add your payment logic here after successful OTP verification
+        // Redirect to the order placed page
+        window.location.href = "order.html";
+    } else {
+        alert("OTP verification failed! Please try again.");
+        // Add your logic for handling OTP verification failure here
     }
-    // console.log(data)
-    return total
 }
 
-var cartsum = "Rs" + " " + (sum())
+// Event listener for the "Pay Now" button
+document.getElementById("btn").addEventListener("click", function (event) {
+    event.preventDefault();
+    // Display OTP
+    displayOTP();
 
-document.querySelector(".changing").innerText = cartsum;
-document.querySelector(".changing1").innerText = cartsum;
+    // Show OTP verification UI
+    document.getElementById("otpInput").style.display = "block";
+    document.getElementById("verifyOtpButton").style.display = "block";
+});
 
-
-
-
-
+// Event listener for the "Verify OTP" button
+document.getElementById("verifyOtpButton").addEventListener("click", function (event) {
+    event.preventDefault();
+    verifyOTP();
+});
