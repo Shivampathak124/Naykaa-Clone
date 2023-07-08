@@ -869,7 +869,24 @@
             color: white;
            font-size: 23px ;
         }
-       
+        #hoverr{
+            font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    -webkit-letter-spacing: 0.1px;
+    -moz-letter-spacing: 0.1px;
+    -ms-letter-spacing: 0.1px;
+    letter-spacing: 0.1px;
+    border-radius: 8px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.625rem;;
+    padding-bottom: 0.625rem;
+    margin-top: -20px;
+    background-color: #E80071;
+    color: #ffffff;
+   
+        }
       
        
        .div8{
@@ -917,7 +934,8 @@
     -webkit-text-decoration: none;
     text-decoration: none;
   }
+ 
 
-  /*Original file*/
+
 
 
