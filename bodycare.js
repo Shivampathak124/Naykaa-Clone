@@ -75,6 +75,7 @@ function setTable(bodyCareData) {
       cartData.push(element);
       localStorage.setItem("cart", JSON.stringify(cartData));
       cartCountText.textContent = cartData.length;
+      alert("Product added to Cart successfully")
     })
 
     imgData.src = element.img;
@@ -89,6 +90,7 @@ function setTable(bodyCareData) {
     discountedPrice.textContent = "₹" + afterDiscount;
     element.afterDiscount = afterDiscount;
     addToCart.textContent = "Add to Cart";
+    
 
     mainDiv.append(
       imgData,
