@@ -1,95 +1,427 @@
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Make up</title>
-    <link rel = "icon" href = "https://play-lh.googleusercontent.com/GDz-jb59bT1pStsNQ_8w0jmu5gsKInnTPSWQT30_GVDFY6ODx4RdzbYhi0tB4pelxA" 
-        type = "image/x-icon">
+    <link rel="icon"
+        href="https://play-lh.googleusercontent.com/GDz-jb59bT1pStsNQ_8w0jmu5gsKInnTPSWQT30_GVDFY6ODx4RdzbYhi0tB4pelxA"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="homestyle.css">
     <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/e3ddd9c631.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <nav>
-        <div>
-            <a href="index.html" id="home">
-                <img src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/cosmetic-companies/nykaa-logo.png"/>
-            </a>
-        </div>
-        <div>
-            <a href="bodycare.html" id="bodyCare">Body Care</a>
-            <a href="makeup.html" id="faceCare">Make up</a>
-            <a href="haircare.html" id="hairCare">Hair Care</a>
-            <input type="text" id="searchBar" placeholder="Search on Nykaa">
-        </div>
-        <div>
-            <a href="signup.html" id="signUp">
-                Sign in
-            </a>
-            <a href="cart.html" id="cart">
-                🛒 <sup id="cartCount">0</sup>
-            </a>
-        </div>
-    </nav>
-    <nav id="offerNav">
-        <marquee width="60%" direction="left">
-            Introducing 5% FLAT on all items, for more offers Use MASAI25 on cart checkout.
-            </marquee>
-    </nav>
-    
+    <!-- header start -->
+        <div id="nav">
+        
+            <div id="top">
+              <div id="beauty"><marquee behavior="slide"  direction="up" loop="1000"scrolldelay="500"><b class="special">BEAUTY BONANZA Get Your Daily Dose Off Amazing Deals  </b></marquee></div>
+              <div class="getapp">
+                
+                  <a href="getapp/help.html">Help</a>
+              
+              <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+              <a href="offer/p1.html">Gift Card</a>
+              <i class="fa fa-gift" aria-hidden="true"></i>
+              <a href="offer/p1.html">Store & Events</a>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <a href="getapp/getapp.html">Get App</a>
+               <i class="fa fa-mobile" aria-hidden="true"></i>
+              </div>
+              
+            </div>
+            
+  
+            <div id="navbar">
+              <div class="container">
+                  <div class="marginn">
+                  
+                      
+                      <a href="index.html"><img src="https://github.com/Shivampathak124/unnatural-throat-9914/blob/navbar/nykaa%20logo.png?raw=true" id="logo"></a>
+                          
+                  </div>
+                 
+                  <div class="margin">
+                      <h4  id="hover" >Categories</h4>
+                  </div>
+                  
+                  <div class="margin">
+                      <h4 id="hover">Brands</h4>
+                      
+                  </div>
+                  <div class="margin">
+                      <h4 id="hover">Luxe</h4>
+                      
+                  </div>
+                  <div class="margin">
+                      <h4 id="hover">Nykaa Fashion</h4>
+                      
+                  </div>
+                  <div class="margin">
+                      <h4 id="hover">Beauty Advice</h4>
+                      
+                  </div>
+  
+                  <form action="">
+                      <input type="text" id="search" placeholder="Search On Nykaa">
+                  </form>
+                 
+                  <div class="margin">
+                      <div class="userBox">
+                          <i class="fa fa-user" aria-hidden="true" id="fafa"></i>
+                          <p id="hover"><a href="homelogin.html">ACCOUNT</a></p>
+                          
+                      </div>
+                     
+                      <div class="userLogin">
+                          
+                          <button id="Orders"><a id="a" href="">Orders</a></button>
+                          <button id="Profile"><a id="a" href="">Profile</a></button>
+                          <button id="Wallet"><a id="a" href="">Wallet</a></button>
+                          <button id="Wishlist"><a id="a" href="">Wishlist</a></button>
+                          <button id="Logout"><a id="a" href="">Logout</a></button>
+                      </div>
+                  </div>
+  
+                  <div id="cartClick">
+                    
+                          <img src="https://github.com/Shivampathak124/unnatural-throat-9914/blob/navbar/cartbag.png?raw=true" alt="" id="cartItem" onclick="window.location.href='cart.html';">
+                          <p id="cartOnNum">0</p>
+                      
+                  </div>
+              </div>
+            
+              </div>
+             
+          </div>
+     
+      <div id="categories">
+          <div class="container">
+              <ul id="catLinks"> 
+                  <li>
+                      <span><a href="makeup.html">Make Up</a></span>
+                      <ul class="dropdown" >
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                      
+                  </li>
+  
+  
+                  <li>
+                  <span><a href="bodycare.html">Skin</a></span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                  <li>
+                      <span><a href="haircare.html">Hair</a></span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                  <li>
+                      <span href="#">Appliances</span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                  <li>
+                      <span href="#">Bath & Body</span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                  <li>
+                      <span href="#">Natural</span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                  <li>
+                      <span href="#">Momm & Baby</span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                  <li>
+                      <span href="#">Health & Wellness</span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                 
+                  <li>
+                      <span href="#">Men</span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                 
+                  <li>
+                      <span href="#">Fragrance</span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+                  </li>
+                 
+                  <li>
+                      <span href="#">Pop Ups</span>
+                      <ul class="dropdown">
+                          <li id="li"><a href="bodycare.html">EyesFace</a></li>
+                          <li id="li"><a href="bodycare.html">Eyes</a></li>
+                          <li id="li"><a href="bodycare.html">Lips</a></li>
+                          <li id="li"><a href="">Tools & Brushes</a></li>
+                          <li id="li"><a href="">Top Brands</a></li>
+                          <li id="li"><a href="">Makeup Kits</a></li>
+                          <li id="li">Body Art</li>
+                          <li id="li">Nails</li>
+                          <li id="li">Top Brands</li>
+                          <li id="li">Trend</li>
+                          <li id="li">Masks</li>
+                          <li id="li">Tones</li>
+                           <li id="li">Clothing & More</li>
+                          <li id="li">Kids Wear</li>
+                          <li id="li">Beauty Advice</li>
+                      </ul>
+  
+                  </li>
+                  <li>
+                      <span href=""><img src="https://github.com/Shivampathak124/unnatural-throat-9914/blob/navbar/offerimage.png?raw=true" alt="offer image"></span>
+                      
+                  </li>
+                 
+              </ul>
+          </div>
+      </div>
+
+             
+    <!-- header end -->
+
+    <!-- header end -->
+
     <div id="faceCareContainer">
         <div class="banner">
             <h1>The Makeup Store</h1>
             <h4>Discover a limitless range of makeups...</h4>
             <div class="carousel">
                 <div class="slide">
-                  <img src="https://images-static.nykaa.com/creatives/52f35b1e-8f51-45f0-9293-26622d95ea9f/default.png?tr=w-2400,cm-pad_resize" alt="Slide 1">
+                    <img src="https://images-static.nykaa.com/creatives/52f35b1e-8f51-45f0-9293-26622d95ea9f/default.png?tr=w-2400,cm-pad_resize"
+                        alt="Slide 1">
                 </div>
                 <div class="slide">
-                  <img src="https://images-static.nykaa.com/uploads/109e1127-291c-4fce-85f1-fccd6674d501.jpg?tr=w-2400,cm-pad_resize" alt="Slide 2">
+                    <img src="https://images-static.nykaa.com/uploads/109e1127-291c-4fce-85f1-fccd6674d501.jpg?tr=w-2400,cm-pad_resize"
+                        alt="Slide 2">
                 </div>
                 <div class="slide">
-                  <img src="https://images-static.nykaa.com/uploads/fc0cfbd8-d1df-462e-ae6e-66310c6f27f1.jpg?tr=w-2400,cm-pad_resize" alt="Slide 3">
+                    <img src="https://images-static.nykaa.com/uploads/fc0cfbd8-d1df-462e-ae6e-66310c6f27f1.jpg?tr=w-2400,cm-pad_resize"
+                        alt="Slide 3">
                 </div>
-              </div>
+            </div>
             <h2>BRANDS YOU WILL LOVE</h2>
             <h3>Top Makeup brands</h3>
             <div id="brands">
                 <div>
-                    <img src="https://images-static.nykaa.com/creatives/c20540a7-93ae-4ef2-83d6-66f5c3801b52/default.png?tr=w-600,cm-pad_resize"/>
+                    <img
+                        src="https://images-static.nykaa.com/creatives/c20540a7-93ae-4ef2-83d6-66f5c3801b52/default.png?tr=w-600,cm-pad_resize" />
                     <p>Upto 35% Off </p>
                     <p>On Entire Range</p>
                 </div>
                 <div>
-                    <img src="https://images-static.nykaa.com/creatives/b80aea98-b328-4525-a9f8-410d2b3887e5/default.jpg?tr=w-600,cm-pad_resize"/>
+                    <img
+                        src="https://images-static.nykaa.com/creatives/b80aea98-b328-4525-a9f8-410d2b3887e5/default.jpg?tr=w-600,cm-pad_resize" />
                     <p>Upto 30% Off </p>
                     <p>Free gift on 799+</p>
                 </div>
                 <div>
-                    <img src="https://images-static.nykaa.com/creatives/e0f9b825-4a7f-440e-bbdb-492217e472fe/default.png?tr=w-600,cm-pad_resize"/>
+                    <img
+                        src="https://images-static.nykaa.com/creatives/e0f9b825-4a7f-440e-bbdb-492217e472fe/default.png?tr=w-600,cm-pad_resize" />
                     <p>Upto 20% Off </p>
                     <p>On Your Kay Beauty Faves</p>
                 </div>
                 <div>
-                    <img src="https://images-static.nykaa.com/creatives/eb1e37e3-ca0f-4966-9864-7ed238a812da/default.jpg?tr=w-600,cm-pad_resize"/>
+                    <img
+                        src="https://images-static.nykaa.com/creatives/eb1e37e3-ca0f-4966-9864-7ed238a812da/default.jpg?tr=w-600,cm-pad_resize" />
                     <p>Upto 30% Off </p>
                     <p>On Entire Range</p>
                 </div>
                 <div>
-                    <img src="https://images-static.nykaa.com/creatives/df79dd86-11f6-4131-93eb-7206ac5ec4c2/default.jpg?tr=w-600,cm-pad_resize"/>
+                    <img
+                        src="https://images-static.nykaa.com/creatives/df79dd86-11f6-4131-93eb-7206ac5ec4c2/default.jpg?tr=w-600,cm-pad_resize" />
                     <p>Secret To</p>
                     <p>Pore-less Looking Skin</p>
                 </div>
                 <div>
-                    <img src="https://images-static.nykaa.com/creatives/9ac3b292-dc7a-487b-8096-85fcf743e7c9/default.jpg?tr=w-600,cm-pad_resize"/>
+                    <img
+                        src="https://images-static.nykaa.com/creatives/9ac3b292-dc7a-487b-8096-85fcf743e7c9/default.jpg?tr=w-600,cm-pad_resize" />
                     <p>Min 20% Off </p>
                     <p>Free gift on 599+</p>
                 </div>
             </div>
+            <h2 style="text-align: center;">Trending Now</h2>
+            <div id="curations">
+                
+                <div>
+                    <img src="https://images-static.nykaa.com/uploads/bbcd87d4-4fbb-4ecb-ad07-b414a2f879ee.jpeg?tr=w-600,cm-pad_resize"/>
+                </div>
+                <div>
+                    <img src="https://images-static.nykaa.com/uploads/04a23d99-e49d-4ca0-9150-df3b7eca8365.jpeg?tr=w-600,cm-pad_resize"/>
+                </div>
+                <div>
+                    <img src="https://images-static.nykaa.com/uploads/105d8c1b-6879-4a32-90ea-201c6958ca42.jpg?tr=w-600,cm-pad_resize"/>
+                </div>
+                <div>
+                    <img src="https://images-static.nykaa.com/uploads/943d3740-eaf8-4360-bc36-94bfd5ba4d2e.jpeg?tr=w-600,cm-pad_resize"/>
+                </div>
+            </div>
+            
             <h2>All Make up Products</h2>
-        </div>
-        
+
         <!-- append faceCare data to this div -->
         <div class="products">
             <div class="filters">
@@ -99,10 +431,18 @@
                     <option value="dsc">Price high to low</option>
                 </select>
             </div>
-            <div class="items"> 
+            <div class="items">
             </div>
         </div>
     </div>
+    <div id="head">
+        <div class="b4 "></div>
+        <div class="b5"></div>
+        <div class="b6"></div>
+        <div class="b7"></div>
+    </div>
 </body>
 <script src="makeup.js"></script>
+<script src="footer.js"></script>
+
 </html>
