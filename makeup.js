@@ -97,6 +97,8 @@ function setTable(faceCareData) {
     addToCart.setAttribute("id", "addButton")
     addToCart.addEventListener("click", function () {
       var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+       alert ("Added One Product")
+     
       cartData.push(element);
       localStorage.setItem("cart", JSON.stringify(cartData));
       cartCountText.textContent = cartData.length;

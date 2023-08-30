@@ -44,3 +44,12 @@ document.getElementById("verifyOtpButton").addEventListener("click", function (e
     event.preventDefault();
     verifyOTP();
 });
+let subtotal=document.querySelector(".changing");
+let subtotalprice=localStorage.getItem("subtotal");
+subtotal.innerHTML=`₹ ${subtotalprice}` 
+let discount=document.querySelector(".discount");
+let discounprice=localStorage.getItem("discount");
+discount.innerHTML=`- ₹${discounprice}`;
+let grandtotal=document.querySelector(".changing1");
+let grandtotalprice=localStorage.getItem("GrandTotal");
+grandtotal.innerHTML=grandtotalprice

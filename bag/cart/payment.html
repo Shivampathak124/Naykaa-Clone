@@ -59,8 +59,7 @@
         <div id="container2">
             <form>
                 <p>Credit/Debit Card</p>
-                <input placeholder="Card Number" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}"
-                    autocomplete="cc-number" maxlength="16" />
+                    <input type="text" id="card_number" name="card_number" maxlength="16" placeholder="Enter Card Number" required>
                 <input type="text" id="otpInput" placeholder="Enter OTP">
 
                 <label class="expiry">expiry</label>
@@ -96,7 +95,7 @@
                 </div>
                 <div class="flex2">
                     <p>Discount</p>
-                    <p>Rs -0</p>
+                    <p class="discount">Rs -0</p>
                 </div>
                 <div class="flex3">
                     <p>Use Reward Points</p>

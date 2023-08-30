@@ -80,10 +80,9 @@
 // var cartSum = "Rs " + calculateCartSum();
 // document.querySelector(".changing").innerText = cartSum;
 // document.querySelector(".changing1").innerText = cartSum;
-var cart = JSON.parse(localStorage.getItem("data"));
-
+var cart = JSON.parse(localStorage.getItem("cart"));
 var rcart = document.querySelector("#cartDetail");
-
+console.log(cart)
 function display(cartdata) {
     cartdata.forEach(function (ele) {
         var card = document.createElement("div");
@@ -95,10 +94,10 @@ function display(cartdata) {
 
         var d2 = document.createElement("div");
         var desc = document.createElement("p");
-        desc.innerText = ele.desc;
+        desc.innerText = ele.name;
 
         var price = document.createElement("p");
-        price.innerText = ele.min;
+        price.innerText = `₹${ele.afterDiscount}`;
 
         d1.append(img);
         d2.append(desc, price);
@@ -112,19 +111,22 @@ function display(cartdata) {
 display(cart);
 
 // Add address details
-document.querySelector("form").addEventListener("submit", addDetail);
 var addArr = [];
 
-function addDetail(event) {
+let form=document.querySelector("form");
+form.addEventListener("submit",function(){
     event.preventDefault();
 
-    var form = event.target;
+    console.log("hii");
+   event.preventDefault();
+
+    var form = document.querySelector("form");
 
     if (
-        form.name.value === "" ||
-        form.mobile.value === "" ||
-        form.code.value === "" ||
-        form.address.value === ""
+        form.name.value == "" ||
+        form.mobile.value == "" ||
+        form.code.value == "" ||
+        form.address.value == ""
     ) {
         alert("Please fill all the required fields");
     } else {
@@ -141,7 +143,7 @@ function addDetail(event) {
         localStorage.setItem("custAdd", JSON.stringify(addArr));
         window.location.href = "payment.html";
     }
-}
+})
 
 // Calculate the cart sum
 function calculateCartSum() {
@@ -159,7 +161,11 @@ function calculateCartSum() {
 }
 
 // Update the cart sum in the UI
-var cartSum = calculateCartSum();
-document.querySelector(".changing").innerText = "Grand Total";
-document.querySelector(".changing1").innerText = "₹" + cartSum.toFixed(0); // Display cart sum without decimal places
+//var cartSum = calculateCartSum();
+let subtotal=localStorage.getItem("subtotal");
+let total=localStorage.getItem("GrandTotal");
+let discount=localStorage.getItem("discount")||0;
+document.querySelector(".changing").innerText =`₹ ${subtotal}`
+document.querySelector("#discount").innerText = `- ₹${discount}`
+document.querySelector(".changing1").innerText = `₹  ${total}` // Display cart sum without decimal places
 

@@ -16,7 +16,7 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #e1c3c3;
-      background-image: url('path/to/your/image.jpg');
+      /* background-image: url('path/to/your/image.jpg'); */
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -40,8 +40,19 @@
 </head>
 
 <body>
-  <h1>Order Placed</h1>
+<h1>Order Placed</h1>
   <p>Your order has been successfully placed. Thank you for shopping with us!</p>
+  <p id="timer"></p>
 </body>
 
 </html>
+<script>
+  let timer=document.querySelector("#timer");
+  document.addEventListener("DOMContentLoaded", (event) => {
+setTimeout(function(){
+  localStorage.clear();
+ window.location.href = "../../index.html";
+},3000)
+
+});
+</script>
