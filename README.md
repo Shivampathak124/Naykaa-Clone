@@ -12,7 +12,7 @@ As a 4-member team, we collaborated on the "Nykaa-Clone" project, focusing on de
 - Local Storage
 
 ### Team Member
--Shubham Deshmukh
+- Shubham Deshmukh
 - Saloni Goyal
 - Shivam Pathak
 - Ashwek
